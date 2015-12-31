@@ -1,13 +1,18 @@
 <dom-module id="my-button">
   <template>
     <content></content>
+    <!--
+      React: this.props.children
+      Angular: transclusion
+      Ember: yeild
+    -->
   </template>
   <script>
     Polymer({
       is: "my-button",
       extends: 'button',
       created: function() {
-        this.style.color = 'red';
+        this.style.color = 'green';
         this.addEventListener('click', this.clickHandler)
       },
       clickHandler: function(){
